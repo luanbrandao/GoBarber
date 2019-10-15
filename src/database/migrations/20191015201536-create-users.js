@@ -1,6 +1,7 @@
+// yarn sequelize migration:create --name=create-users
 // yarn sequelize db:migrate
-// yarn sequelize db:undo
-// yarn sequelize db:undoAll
+// yarn sequelize db:migrate:undo
+// yarn sequelize  db:migrate:undo:all
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('users', {
@@ -32,7 +33,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false
       },
-      update_at: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false
       }
