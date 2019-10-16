@@ -7,6 +7,7 @@ import routes from './routes';
 // yarn add sucrase nodemon -D
 // yarn add bcryptjs
 // yarn add jsonwebtoken
+// yarn add yup, validação
 
 import './database';
 
