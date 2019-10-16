@@ -6,6 +6,7 @@ import routes from './routes';
 // yarn add express
 // yarn add sucrase nodemon -D
 // yarn add bcryptjs
+// yarn add jsonwebtoken
 
 import './database';
 
