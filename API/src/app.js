@@ -14,6 +14,9 @@ import routes from './routes';
 // yarn add  multer
 
 // yarn add date-fns@next
+
+// docker run --name mongobarber -p 27017:27017 -d -t mongo
+// yarn add mongoose
 import './database';
 
 class App {
