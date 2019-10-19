@@ -9,6 +9,8 @@ import routes from './routes';
 // yarn add jsonwebtoken
 // yarn add yup, validação
 
+// envio de arquivos
+// yarn add  multer
 import './database';
 
 class App {
