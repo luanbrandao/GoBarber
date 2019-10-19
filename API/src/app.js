@@ -12,6 +12,8 @@ import routes from './routes';
 
 // envio de arquivos
 // yarn add  multer
+
+// yarn add date-fns@next
 import './database';
 
 class App {
