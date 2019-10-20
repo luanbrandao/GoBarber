@@ -17,6 +17,9 @@ import routes from './routes';
 
 // docker run --name mongobarber -p 27017:27017 -d -t mongo
 // yarn add mongoose
+
+// envio de email
+// yarn add nodemailer
 import './database';
 
 class App {
