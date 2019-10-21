@@ -22,6 +22,9 @@ import routes from './routes';
 // yarn add nodemailer
 // tamplate pro email
 // yarn  add express-handlebars nodemailer-express-handlebars
+
+// docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+// yarn add bee-queue
 import './database';
 
 class App {
