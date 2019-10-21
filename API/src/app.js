@@ -20,6 +20,8 @@ import routes from './routes';
 
 // envio de email
 // yarn add nodemailer
+// tamplate pro email
+// yarn  add express-handlebars nodemailer-express-handlebars
 import './database';
 
 class App {
