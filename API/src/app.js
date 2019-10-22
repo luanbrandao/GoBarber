@@ -2,7 +2,12 @@
 // const routes = require('./routes')
 import express from 'express';
 import path from 'path';
+import Youch from 'youch';
+import * as Sentry from '@sentry/node';
+import 'express-async-errors';
+
 import routes from './routes';
+import sentryConfig from './config/sentry';
 
 // yarn add express
 // yarn add sucrase nodemon -D
@@ -25,16 +30,28 @@ import routes from './routes';
 
 // docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 // yarn add bee-queue
+
+// Tratamento de exceções
+// yarn add @sentry/node@5.7.1
+// yarn add express-async-errors
+// faz uma tratativa das msg de erros
+// yarn add youch
 import './database';
 
 class App {
   constructor() {
     this.server = express();
+
+    Sentry.init(sentryConfig);
+
     this.middlewares();
     this.routes();
+    this.exeptionHandler();
   }
 
   middlewares() {
+    // The request handler must be the first middleware on the app
+    this.server.use(Sentry.Handlers.requestHandler());
     this.server.use(express.json());
     this.server.use(
       '/files',
@@ -44,6 +61,16 @@ class App {
 
   routes() {
     this.server.use(routes);
+    // The error handler must be before any other error middleware and after all controllers
+    this.server.use(Sentry.Handlers.errorHandler());
+  }
+
+  exeptionHandler() {
+    this.server.use(async (err, req, res, next) => {
+      const errors = await new Youch(err, req).toJSON();
+
+      return res.status(500).json(errors);
+    });
   }
 }
 
