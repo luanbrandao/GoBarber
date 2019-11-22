@@ -7,6 +7,7 @@ import Youch from 'youch';
 import * as Sentry from '@sentry/node';
 import 'express-async-errors';
 
+import cors from 'cors';
 import routes from './routes';
 import sentryConfig from './config/sentry';
 
@@ -38,6 +39,8 @@ import sentryConfig from './config/sentry';
 // faz uma tratativa das msg de erros
 // yarn add youch
 // yarn add dotenv
+
+// yarn add cors
 import './database';
 
 class App {
@@ -54,6 +57,7 @@ class App {
   middlewares() {
     // The request handler must be the first middleware on the app
     this.server.use(Sentry.Handlers.requestHandler());
+    this.server.use(cors());
     this.server.use(express.json());
     this.server.use(
       '/files',
