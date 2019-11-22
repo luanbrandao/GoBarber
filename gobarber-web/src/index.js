@@ -10,6 +10,8 @@ import App from './App';
 // yarn add react-router-dom
 // yarn add history
 
+// yarn add reactotron-react-js
+
 // yarn add styled-components
 // yarn add react-icons
 
