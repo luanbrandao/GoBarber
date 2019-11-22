@@ -17,6 +17,12 @@ import App from './App';
 // yarn add eslint-plugin-import
 
 // yarn add styled-components
+
+// alterar os imports usndo ../..
+// yarn add customize-cra react-app-rewired -D
+// yarn add babel-plugin-root-import -D
+// yarn add eslint-import-resolver-babel-plugin-root-import -D
+
 // yarn add react-icons
 
 ReactDOM.render(<App />, document.getElementById('root'));
