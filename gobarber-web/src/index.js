@@ -13,6 +13,8 @@ import App from './App';
 // yarn add reactotron-react-js
 
 // yarn add prop-types
+// yarn add eslint-plugin-jsx-a11y
+// yarn add eslint-plugin-import
 
 // yarn add styled-components
 // yarn add react-icons

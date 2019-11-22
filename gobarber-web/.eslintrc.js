@@ -1,7 +1,8 @@
 module.exports = {
   env: {
-    browser: true,
     es6: true,
+    jest: true,
+    browser: true
   },
   extends: [
     'airbnb',
@@ -21,9 +22,10 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'react','prettier'
+    "react", "jsx-a11y", "import",  "prettier"
   ],
   rules: {
+    "react/jsx-props-no-spreading" : "off",
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
     "import/prefer-default-export": "off",
@@ -35,8 +37,14 @@ module.exports = {
     "no-underscore-dangle": "off",
     camelcase: "off",
     "no-console": ["error", { allow: ["tron"] }],
-
     // "react-hooks/rules-of-hooks": "error",
-    // "react-hooks/exhaustive-deps": "warn",
+    // "react-hooks/exhaustive-deps": "warn"
+  },
+  settings: {
+    // "import/resolver": {
+    //   "babel-plugin-root-import": {
+    //     rootPathSuffix: "src"
+    //   },
+    // },
   },
 };
