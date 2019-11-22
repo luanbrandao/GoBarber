@@ -12,6 +12,8 @@ import App from './App';
 
 // yarn add reactotron-react-js
 
+// yarn add prop-types
+
 // yarn add styled-components
 // yarn add react-icons
 
