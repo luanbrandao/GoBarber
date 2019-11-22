@@ -6,7 +6,10 @@ import App from './App';
 // yarn eslint --init
 // yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint  -D
 // yarn add eslint-plugin-react-hooks -D
+
 // yarn add react-router-dom
+// yarn add history
+
 // yarn add styled-components
 // yarn add react-icons
 
