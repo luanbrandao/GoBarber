@@ -24,6 +24,8 @@ import App from './App';
 // yarn add eslint-import-resolver-babel-plugin-root-import -D
 
 // yarn add polished
+// yarn add @rocketseat/unform
+
 // yarn add react-icons
 
 ReactDOM.render(<App />, document.getElementById('root'));
