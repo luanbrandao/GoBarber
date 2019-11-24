@@ -26,6 +26,7 @@ import App from './App';
 // yarn add polished
 // yarn add @rocketseat/unform
 
+// yarn add yup
 // yarn add react-icons
 
 ReactDOM.render(<App />, document.getElementById('root'));
