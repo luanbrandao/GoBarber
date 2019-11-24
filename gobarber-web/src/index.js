@@ -27,6 +27,9 @@ import App from './App';
 // yarn add @rocketseat/unform
 
 // yarn add yup
+
+// yarn add redux  redux-saga react-redux reactotron-redux reactotron-redux-saga immer
+
 // yarn add react-icons
 
 ReactDOM.render(<App />, document.getElementById('root'));
