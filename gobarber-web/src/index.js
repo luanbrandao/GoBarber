@@ -28,9 +28,10 @@ import App from './App';
 
 // yarn add yup
 
-// yarn add redux  redux-saga react-redux reactotron-redux reactotron-redux-saga immer
+// yarn add redux  redux-saga react-redux reactotron-redux reactotron-redux-saga reactotron-react-js immer
 
 // yarn add axios
 // yarn add react-icons
+// yarn add redux-persist
 
 ReactDOM.render(<App />, document.getElementById('root'));
