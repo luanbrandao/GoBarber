@@ -35,5 +35,6 @@ import App from './App';
 
 // yarn add react-toastify
 // yarn add react-icons
+// yarn add react-perfect-scrollbar
 
 ReactDOM.render(<App />, document.getElementById('root'));
