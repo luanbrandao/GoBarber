@@ -36,5 +36,6 @@ import App from './App';
 // yarn add react-toastify
 // yarn add react-icons
 // yarn add react-perfect-scrollbar
+// yarn add date-fns@next
 
 ReactDOM.render(<App />, document.getElementById('root'));
