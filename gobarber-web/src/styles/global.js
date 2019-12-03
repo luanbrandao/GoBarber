@@ -24,6 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* input , button, não herdam as fontes */
 body, input , button {
   font: 14px 'Roboto', sans-serif;
 }
