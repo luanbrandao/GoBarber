@@ -25,13 +25,17 @@ export function* signIn({ payload }) {
     // seta o token em todas as requisições
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
+    // yield delay(3000);
     yield put(signInSuccess(token, user));
 
     // history.push('/dashboard');
   } catch (error) {
+    console.tron.log('error => ', error);
     Alert.alert(
       'Falha na autenticação',
-      'Houve um erro no login, verifique seus dados'
+      // 'Houve um erro no login, verifique seus dados'
+      error.response.data.error ||
+        'Houve um erro no login, verifique seus dados'
     );
     yield put(signFailure());
   }
@@ -45,13 +49,13 @@ export function* signUp({ payload }) {
       name,
       email,
       password,
-      provider: true,
     });
     // history.push('/');
   } catch (error) {
     Alert.alert(
-      'Falha na autenticação',
-      'Houve um erro no login, verifique seus dados'
+      'Falha no cadastro',
+      error.response.data.error ||
+        'Houve um erro no cadastro, verifique seus dados'
     );
     yield put(signFailure());
   }
