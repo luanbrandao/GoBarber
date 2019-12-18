@@ -11,12 +11,18 @@ import {
 } from './styles';
 import logo from '~/assets/logo.png';
 
-export default function SignIn({ navigation }) {
+export default function SignUp({ navigation }) {
   return (
     <Background>
       <Container>
         <Image source={logo} />
         <Form>
+          <FormInput
+            icon="person-outline"
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder="Nome completo"
+          />
           <FormInput
             icon="mail-outline"
             keyboardType="email-address"
