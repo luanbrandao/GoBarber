@@ -59,7 +59,7 @@ export default function Dashboard() {
         };
       });
 
-      console.log('data => ', data);
+      // console.log('data => ', data);
       setSchedule(data);
     }
     loadSchedule();
