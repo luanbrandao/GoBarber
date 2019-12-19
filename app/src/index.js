@@ -22,6 +22,7 @@ import App from './App';
 // react-native link @react-native-community/async-storage
 // yarn add axios
 // yarn add react-navigation-tabs
+// yarn add date-fns@next
 export default function Index() {
   return (
     <Provider store={store}>
