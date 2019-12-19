@@ -5,17 +5,16 @@ import { updateProfileSuccess, updateProfileFailute } from './actions';
 
 export function* updateProfile({ payload }) {
   try {
-    const { name, email, avatar_id, ...rest } = payload.data;
+    const { name, email, ...rest } = payload.data;
 
     const profile = {
       name,
       email,
-      avatar_id,
       ...(rest.oldPassword ? rest : {}),
     };
 
     const response = yield call(api.put, 'users', profile);
-    Alert.alert('Secesso!', 'O usuário não pode ser prestador de serviços');
+    Alert.alert('Secesso!', 'dados atualizados');
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
     Alert.alert(
