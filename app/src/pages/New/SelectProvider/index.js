@@ -53,7 +53,7 @@ SelectProvider.navigationOptions = ({ navigation }) => ({
   headerLeft: () => (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate('Dashboard');
+        navigation.goBack();
       }}
     >
       <Icon name="chevron-left" size={20} color="#fff" />
