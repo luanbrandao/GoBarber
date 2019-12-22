@@ -1,5 +1,6 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import React from 'react';
 import SignIn from './pages/SignIn';
@@ -17,6 +18,7 @@ export default (signedIn = false) =>
     createSwitchNavigator(
       {
         // não ta logado
+        // createSwitchNavigator, não fica na memória.
         Sign: createSwitchNavigator({
           SignIn,
           SignUp,
@@ -25,7 +27,8 @@ export default (signedIn = false) =>
           {
             Dashboard,
             New: {
-              screen: createSwitchNavigator(
+              // createStackNavigator navegação por pilha
+              screen: createStackNavigator(
                 {
                   SelectProvider,
                   SelectDateTime,
@@ -33,11 +36,9 @@ export default (signedIn = false) =>
                 },
                 {
                   defaultNavigationOptions: {
-                    headerTransparet: true,
-                    headerTintColor: '#FFF',
-                    headerLeftContainerStyle: {
-                      marginLeft: 20,
-                    },
+                    headerTransparent: true,
+                    headerTintColor: '#fff',
+                    headerLeftContainerStyle: { marginLeft: 20 },
                   },
                 }
               ),

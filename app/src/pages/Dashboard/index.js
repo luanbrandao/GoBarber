@@ -36,14 +36,14 @@ export default function Dashboard() {
     <Background>
       <Container>
         <Title>Agendamentos</Title>
+        <List
+          data={appointments}
+          keyExtractor={item => String(item.id)}
+          renderItem={({ item }) => (
+            <Appointment onCancel={() => handleCancel(item.id)} data={item} />
+          )}
+        />
       </Container>
-      <List
-        data={appointments}
-        keyExtractor={item => String(item.id)}
-        renderItem={({ item }) => (
-          <Appointment onCancel={() => handleCancel(item.id)} data={item} />
-        )}
-      />
     </Background>
   );
 }

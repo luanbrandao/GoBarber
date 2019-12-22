@@ -14,6 +14,8 @@ import App from './App';
 // yarn add react-native-vector-icons
 // react-native-gesture-handler
 // yarn add react-navigation
+// yarn add react-navigation-tabs
+// yarn add react-navigation-stack
 // yarn add react-native-reanimated react-native-gesture-handler react-native-screens@^1.0.0-alpha.23
 // yarn add reactotron-react-native reactotron-redux reactotron-redux-saga
 // yarn add redux  redux-saga react-redux
