@@ -3,14 +3,7 @@ import { Image } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { signInRequest } from '~/store/modules/auth/actions';
 import Background from '~/components/Background';
-import {
-  Container,
-  Form,
-  FormInput,
-  SubmitButton,
-  SignLink,
-  SignLinkText,
-} from './styles';
+import { Container, Form, FormInput, SubmitButton } from './styles';
 import logo from '~/assets/logo.png';
 
 export default function SignIn({ navigation }) {
@@ -56,10 +49,6 @@ export default function SignIn({ navigation }) {
             Acessar
           </SubmitButton>
         </Form>
-
-        <SignLink onPress={() => navigation.navigate('SignUp')}>
-          <SignLinkText>Criar conta gratuita</SignLinkText>
-        </SignLink>
       </Container>
     </Background>
   );
